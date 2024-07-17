@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block titulo %} Buscador {% endblock %}
+
+{% block contenido %} 
+
+{% if peliculas %}
+
+    <div class="card" >
+        <div class="card-body">
+            {% if actor %}
+                <h4 class="card-title">Películas protagonizadas por {{ actor }}</h4>
+            {% else %}  
+                {% if director %}
+                    <h4 class="card-title">Películas dirigidas por {{ director }}</h4>  
+                {% else %}
+                    <h4 class="card-title">Películas con el texto '{{ buscador }}'</h4>
+                {% endif %}
+            {% endif %}
+
+            {% if actores %}
+                <div class="container" >
+                    <br/>
+                    <div class="row justify-content-md-center">
+
+                        <div class="col-md-auto">
+                            {% for actorindex in actores %}
+                                {% load static %}
+                                <img class="avataractor" src="{% static actorindex.imagenactor %}" >
+                            {% endfor %}
+                        </div>
+
+                        <div class="col-6">
+                            <div class="table-responsive">
+
+                                {% for actorindex in actores %}
+                                    {{ actorindex.textoactor }}
+                                {% endfor %}
+
+                                <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                        <!--
+                                        <tr>
+                                            <th scope="col">Ordenadas por Año</th>
+                                        </tr>
+                                        -->
+                                        <tr>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        {% for pelicula in peliculas %}
+                                        <tr class="">
+                                            <td><a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                                                {{ pelicula.nombre }} ({{ pelicula.anio }}, 
+                                                {{ pelicula.director }})</a></td>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            {% else %}
+
+                {% if directores %}
+                    <div class="container" >
+                        <br/>
+                        <div class="row justify-content-md-center">
+
+                            <div class="col-md-auto">
+                                {% for directorindex in directores %}
+                                   {% load static %}
+                                    <img class="avataractor" src="{% static directorindex.imagendirector %}" >
+                                {% endfor %}
+                            </div>
+
+                            <div class="col-6">
+                                <div class="table-responsive">
+
+                                    {% for directorindex in directores %}
+                                        {{ directorindex.textodirector }}
+                                    {% endfor %}
+
+                                    <table class="table table-striped">
+                                        <thead class="thead-dark">
+
+                                            <!--
+                                            <tr>
+                                                <th scope="col">Ordenadas por Año</th>
+                                            </tr>
+                                            -->
+
+                                            <tr>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            {% for pelicula in peliculas %}
+                                            <tr class="">
+                                                <td><a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                                                    {{ pelicula.nombre }} ({{ pelicula.anio }}, 
+                                                    {{ pelicula.director }})</a></td>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                {% else %}
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Ordenadas por Año</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {% for pelicula in peliculas %}
+                                    <tr class="">
+                                        <td><a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                                            {{ pelicula.nombre }} ({{ pelicula.anio }}, 
+                                            {{ pelicula.director }})</a></td>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                    {% endif %}    
+            {% endif %}
+            
+        </div>
+
+    </div> 
+
+{% else %}    
+
+    <div class="container" align="center">
+
+        <div class="col-md-6">
+            <div class="h-100 p-3 text-white bg-secondary border rounded-3" >
+
+                <form method="get">
+                    <div class="mb-3">
+                    <label for="" class="form-label">Ingrese parte del nombre de una película, actor o director</label>
+                    <input type="text" value="{{ request.GET.buscar }}"
+                        class="form-control" name="buscar" aria-describedby="helpId" 
+                        placeholder="" minlength="4" maxlength="20">
+
+                    </div>
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </form>    
+
+            </div>
+        </div>
+
+    </div>
+
+    {% if buscador %}
+        <div class="container" align="center">
+            </br>
+            <p>No se encontraron resultados para "<b>{{ buscador }}</b>"</p>
+        </div>
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}

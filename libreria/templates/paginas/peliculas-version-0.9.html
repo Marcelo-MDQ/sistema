@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Películas</h4>
+        
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Director</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for pelicula in peliculas %}
+                    <tr class="">
+                        <td><a href="{% url 'resenia_Pelicula' pelicula.id_pelicula %}">{{ pelicula.nombre }}</a></td>
+                        <td>{{ pelicula.anio }}</td>
+                        <td>{{ pelicula.director }}</td>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+</div> 
+
+{% endblock %}

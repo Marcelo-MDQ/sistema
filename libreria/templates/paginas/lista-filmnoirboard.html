@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title" align="center">Listado de Film Noir Board</h4>
+        
+        <div class="row justify-content-md-center">
+                 
+            <div  align="center">
+            <p >
+                Excelente <a target="_blank" href="https://filmnoirboard.blogspot.com/2014/05/film-noir-100.html">
+                ranking</a> de más de 200 películas del sitio <a target="_blank" href="https://filmnoirboard.blogspot.com/">Film Noir Board</a> en el que me basé para comenzar 
+                mi aventura con el cine negro. 
+                
+                Descubrí este listado en el año 2020 cuando tenía 
+                unos 220 títulos, el listado que reproduzco ahora en mi sitio es de marzo 2023
+                 y ya tiene 234, obviamente hay nuevas películas y también cambios en el orden. 
+
+                Son todas películas del período clásico, 
+                aunque algunas no me parecen noir, por ejemplo Cat People y I Walked with a Zombie, 
+                ambas de Jacques Tourneur. 
+            </p>
+            <div>
+        
+            <div class="col-md-auto">
+                <table class="table table-striped">
+                    <tr><td>1</td><td><a href="{% url 'resenia_Pelicula' 523 %}">Double Indemnity</a></td><td>1944</td><td>Billy Wilder</td></tr>
+                    <tr><td>2</td><td><a href="{% url 'resenia_Pelicula' 514 %}">Scarlet Street</a></td><td>1945</td><td>Fritz Lang</td></tr>
+                    <tr><td>3</td><td><a href="{% url 'resenia_Pelicula' 522 %}">Gun Crazy</a></td><td>1950</td><td>Joseph H. Lewis</td></tr>
+                    <tr><td>4</td><td><a href="{% url 'resenia_Pelicula' 515 %}">The Big Heat</a></td><td>1953</td><td>Fritz Lang</td></tr>
+                    <tr><td>5</td><td><a href="{% url 'resenia_Pelicula' 563 %}">Sunset Boulevard</a></td><td>1950</td><td>Billy Wilder</td></tr>
+                    <tr><td>6</td><td><a href="{% url 'resenia_Pelicula' 511 %}">The Maltese Falcon</a></td><td>1941</td><td>John Huston</td></tr>
+                    <tr><td>7</td><td><a href="{% url 'resenia_Pelicula' 519 %}">In a Lonely Place</a></td><td>1950</td><td>Nicholas Ray</td></tr>
+                    <tr><td>8</td><td><a href="{% url 'resenia_Pelicula' 567 %}">Mildred Pierce</a></td><td>1945</td><td>Michael Curtiz</td></tr>
+                    <tr><td>9</td><td><a href="{% url 'resenia_Pelicula' 540 %}">Touch of Evil</a></td><td>1958</td><td>Orson Welles</td></tr>
+                    <tr><td>10</td><td><a href="{% url 'resenia_Pelicula' 562 %}">Ace in the Hole</a></td><td>1951</td><td>Billy Wilder</td></tr>
+                    <tr><td>11</td><td><a href="{% url 'resenia_Pelicula' 576 %}">Shadow of a Doubt</a></td><td>1943</td><td>Alfred Hitchcock</td></tr>
+                    <tr><td>12</td><td><a href="{% url 'resenia_Pelicula' 558 %}">The Night of the Hunter</a></td><td>1955</td><td>Charles Laughton</td></tr>
+                    <tr><td>13</td><td><a href="{% url 'resenia_Pelicula' 606 %}">Strangers on a Train</a></td><td>1951</td><td>Alfred Hitchcock</td></tr>
+                    <tr><td>14</td><td><a href="{% url 'resenia_Pelicula' 584 %}">Night and the City</a></td><td>1950</td><td>Jules Dassin</td></tr>
+                    <tr><td>15</td><td><a href="{% url 'resenia_Pelicula' 600 %}">Notorious</a></td><td>1946</td><td>Alfred Hitchcock</td></tr>
+                    <tr><td>16</td><td><a href="{% url 'resenia_Pelicula' 541 %}">The Asphalt Jungle</a></td><td>1950</td><td>John Huston</td></tr>
+                    <tr><td>17</td><td><a href="{% url 'resenia_Pelicula' 583 %}">Nightmare Alley</a></td><td>1947</td><td>Edmund Goulding</td></tr>
+                    <tr><td>18</td><td><a href="{% url 'resenia_Pelicula' 548 %}">Where the Sidewalk Ends</a></td><td>1950</td><td>Otto Preminger</td></tr>
+                    <tr><td>19</td><td><a href="{% url 'resenia_Pelicula' 545 %}">The Stranger</a></td><td>1946</td><td>Orson Welles</td></tr>
+                    <tr><td>20</td><td><a href="{% url 'resenia_Pelicula' 512 %}">The Big Sleep</a></td><td>1946</td><td>Howard Hawks</td></tr>
+                    <tr><td>21</td><td><a href="{% url 'resenia_Pelicula' 533 %}">Gilda</a></td><td>1946</td><td>Charles Vidor</td></tr>
+                    <tr><td>22</td><td><a href="{% url 'resenia_Pelicula' 516 %}">Kiss Me Deadly</a></td><td>1955</td><td>Robert Aldrich</td></tr>
+                    <tr><td>23</td><td><a href="{% url 'resenia_Pelicula' 551 %}">White Heat</a></td><td>1949</td><td>Raoul Walsh</td></tr>
+                    <tr><td>24</td><td><a href="{% url 'resenia_Pelicula' 518 %}">The Killing</a></td><td>1956</td><td>Stanley Kubrick</td></tr>
+                    <tr><td>25</td><td><a href="{% url 'resenia_Pelicula' 524 %}">Murder, My Sweet</a></td><td>1944</td><td>Edward Dmytryk</td></tr>
+                    <tr><td>26</td><td><a href="{% url 'resenia_Pelicula' 531 %}">Pickup on South Street</a></td><td>1953</td><td>Samuel Fuller</td></tr>
+                    <tr><td>27</td><td><a href="{% url 'resenia_Pelicula' 503 %}">Out of the Past</a></td><td>1947</td><td>Jacques Tourneur</td></tr>
+                    <tr><td>28</td><td><a href="{% url 'resenia_Pelicula' 595 %}">The Window</a></td><td>1949</td><td>Ted Tetzlaff</td></tr>
+                    <tr><td>29</td><td><a href="{% url 'resenia_Pelicula' 527 %}">Sweet Smell of Success</a></td><td>1957</td><td>Alexander Mackendrick</td></tr>
+                    <tr><td>30</td><td><a href="{% url 'resenia_Pelicula' 599 %}">The Prowler</a></td><td>1951</td><td>Joseph Losey</td></tr>
+                    <tr><td>31</td><td><a href="{% url 'resenia_Pelicula' 624 %}">On Dangerous Ground</a></td><td>1952</td><td>Nicholas Ray</td></tr>
+                    <tr><td>32</td><td><a href="{% url 'resenia_Pelicula' 575 %}">The Lineup</a></td><td>1958</td><td>Don Siegel</td></tr>
+                    <tr><td>33</td><td><a href="{% url 'resenia_Pelicula' 615 %}">The Sniper</a></td><td>1952</td><td>Edward Dmytryk</td></tr>
+                    <tr><td>34</td><td><a href="{% url 'resenia_Pelicula' 536 %}">The Big Combo</a></td><td>1955</td><td>Joseph H. Lewis</td></tr>
+                    <tr><td>35</td><td><a href="{% url 'resenia_Pelicula' 513 %}">Body and Soul</a></td><td>1947</td><td>Robert Rossen</td></tr>
+                    <tr><td>36</td><td><a href="{% url 'resenia_Pelicula' 580 %}">Key Largo</a></td><td>1948</td><td>John Huston</td></tr>
+                    <tr><td>37</td><td><a href="{% url 'resenia_Pelicula' 507 %}">Laura</a></td><td>1944</td><td>Otto Preminger</td></tr>
+                    <tr><td>38</td><td><a href="{% url 'resenia_Pelicula' 546 %}">The Lady from Shanghai</a></td><td>1947</td><td>Orson Welles</td></tr>
+                    <tr><td>39</td><td><a href="{% url 'resenia_Pelicula' 592 %}">Sudden Fear</a></td><td>1952</td><td>David Miller</td></tr>
+                    <tr><td>40</td><td><a href="{% url 'resenia_Pelicula' 571 %}">Panic in the Streets</a></td><td>1950</td><td>Elia Kazan</td></tr>
+                    <tr><td>41</td><td><a href="{% url 'resenia_Pelicula' 649 %}">The Big Clock</a></td><td>1948</td><td>John Farrow</td></tr>
+                    <tr><td>42</td><td><a href="{% url 'resenia_Pelicula' 501 %}">The Killers</a></td><td>1946</td><td>Robert Siodmak</td></tr>
+                    <tr><td>43</td><td><a href="{% url 'resenia_Pelicula' 642 %}">This Gun for Hire</a></td><td>1942</td><td>Frank Tuttle</td></tr>
+                    <tr><td>44</td><td><a href="{% url 'resenia_Pelicula' 554 %}">Brute Force</a></td><td>1947</td><td>Jules Dassin</td></tr>
+                    <tr><td>45</td><td><a href="{% url 'resenia_Pelicula' 508 %}">Whirlpool</a></td><td>1949</td><td>Otto Preminger</td></tr>
+                    <tr><td>46</td><td><a href="{% url 'resenia_Pelicula' 670 %}">Nightfall</a></td><td>1957</td><td>Jacques Tourneur</td></tr>
+                    <tr><td>47</td><td><a href="{% url 'resenia_Pelicula' 593 %}">Angel Face</a></td><td>1952</td><td>Otto Preminger</td></tr>
+                    <tr><td>48</td><td><a href="{% url 'resenia_Pelicula' 617 %}">The Strange Love of Martha Ivers</a></td><td>1946</td><td>Lewis Milestone</td></tr>
+                    <tr><td>49</td><td><a href="{% url 'resenia_Pelicula' 676 %}">Sorry, Wrong Number</a></td><td>1948</td><td>Anatole Litvak</td></tr>
+                    <tr><td>50</td><td><a href="{% url 'resenia_Pelicula' 552 %}">Criss Cross</a></td><td>1949</td><td>Robert Siodmak</td></tr>
+                    <tr><td>51</td><td><a href="{% url 'resenia_Pelicula' 652 %}">Phantom Lady</a></td><td>1944</td><td>Robert Siodmak</td></tr>
+                    <tr><td>52</td><td><a href="{% url 'resenia_Pelicula' 506 %}">Detour</a></td><td>1945</td><td>Edgar G. Ulmer</td></tr>
+                    <tr><td>53</td><td><a href="{% url 'resenia_Pelicula' 643 %}">T-Men</a></td><td>1947</td><td>Anthony Mann</td></tr>
+                    <tr><td>54</td><td><a href="{% url 'resenia_Pelicula' 640 %}">The Glass Key</a></td><td>1942</td><td>Stuart Heisler</td></tr>
+                    <tr><td>55</td><td><a href="{% url 'resenia_Pelicula' 797 %}">Border Incident</a></td><td>1949</td><td>Anthony Mann</td></tr>
+                    <tr><td>56</td><td><a href="{% url 'resenia_Pelicula' 521 %}">Crossfire</a></td><td>1947</td><td>Edward Dmytryk</td></tr>
+                    <tr><td>57</td><td><a href="{% url 'resenia_Pelicula' 660 %}">No Way Out</a></td><td>1950</td><td>Joseph L. Mankiewicz</td></tr>
+                    <tr><td>58</td><td><a href="{% url 'resenia_Pelicula' 798 %}">Illegal</a></td><td>1955</td><td>Lewis Allen</td></tr>
+                    <tr><td>59</td><td><a href="{% url 'resenia_Pelicula' 816 %}">New York Confidential</a></td><td>1955</td><td>Russell Rouse</td></tr>
+                    <tr><td>60</td><td><a href="{% url 'resenia_Pelicula' 712 %}">Ride the Pink Horse</a></td><td>1947</td><td>Robert Montgomery</td></tr>
+                    <tr><td>61</td><td><a href="{% url 'resenia_Pelicula' 724 %}">Odds Against Tomorrow</a></td><td>1959</td><td>Robert Wise</td></tr>
+                    <tr><td>62</td><td><a href="{% url 'resenia_Pelicula' 814 %}">Nora Prentiss</a></td><td>1947</td><td>Vincent Sherman</td></tr>
+                    <tr><td>63</td><td><a href="{% url 'resenia_Pelicula' 581 %}">Kiss of Death</a></td><td>1947</td><td>Henry Hathaway</td></tr>
+                    <tr><td>64</td><td><a href="{% url 'resenia_Pelicula' 582 %}">High Sierra</a></td><td>1941</td><td>Raoul Walsh</td></tr>
+                    <tr><td>65</td><td><a href="{% url 'resenia_Pelicula' 669 %}">City of Fear</a></td><td>1959</td><td>Irving Lerner</td></tr>
+                    <tr><td>66</td><td><a href="{% url 'resenia_Pelicula' 803 %}">Cat People</a></td><td>1942</td><td>Jacques Tourneur</td></tr>
+                    <tr><td>67</td><td><a href="{% url 'resenia_Pelicula' 802 %}">I Walked with a Zombie</a></td><td>1943</td><td>Jacques Tourneur</td></tr>
+                    <tr><td>68</td><td><a href="{% url 'resenia_Pelicula' 810 %}">The Turning Point</a></td><td>1952</td><td>William Dieterle</td></tr>
+                    <tr><td>69</td><td><a href="{% url 'resenia_Pelicula' 717 %}">They Won't Believe Me</a></td><td>1947</td><td>Irving Pichel</td></tr>
+                    <tr><td>70</td><td><a href="{% url 'resenia_Pelicula' 644 %}">Pushover</a></td><td>1954</td><td>Richard Quine</td></tr>
+                    <tr><td>71</td><td><a href="{% url 'resenia_Pelicula' 827 %}">Walk Softly, Stranger</a></td><td>1950</td><td>Robert Stevenson</td></tr>
+                    <tr><td>72</td><td><a href="{% url 'resenia_Pelicula' 577 %}">Act of Violence</a></td><td>1948</td><td>Fred Zinnemann</td></tr>
+                    <tr><td>73</td><td><a href="{% url 'resenia_Pelicula' 675 %}">The Racket</a></td><td>1951</td><td>John Cromwell</td></tr>
+                    <tr><td>74</td><td><a href="{% url 'resenia_Pelicula' 824 %}">Hell's Half Acre</a></td><td>1954</td><td>John H. Auer</td></tr>
+                    <tr><td>75</td><td><a href="{% url 'resenia_Pelicula' 815 %}">Chicago Calling</a></td><td>1951</td><td>John Reinhardt</td></tr>
+                    <tr><td>76</td><td><a href="{% url 'resenia_Pelicula' 685 %}">Mystery Street</a></td><td>1950</td><td>John Sturges</td></tr>
+                    <tr><td>77</td><td><a href="{% url 'resenia_Pelicula' 703 %}">Caged</a></td><td>1950</td><td>John Cromwell</td></tr>
+                    <tr><td>78</td><td><a href="{% url 'resenia_Pelicula' 616 %}">Kansas City Confidential</a></td><td>1952</td><td>Phil Karlson</td></tr>
+                    <tr><td>79</td><td><a href="{% url 'resenia_Pelicula' 566 %}">D.O.A.</a></td><td>1950</td><td>Rudolph Maté</td></tr>
+                    <tr><td>80</td><td><a href="{% url 'resenia_Pelicula' 611 %}">Road House</a></td><td>1948</td><td>Jean Negulesco</td></tr>
+                    <tr><td>81</td><td><a href="{% url 'resenia_Pelicula' 612 %}">Too Late for Tears</a></td><td>1949</td><td>Byron Haskin</td></tr>
+                    <tr><td>82</td><td><a href="{% url 'resenia_Pelicula' 657 %}">The Narrow Margin</a></td><td>1952</td><td>Richard Fleischer</td></tr>
+                    <tr><td>83</td><td><a href="{% url 'resenia_Pelicula' 828 %}">The Devil Thumbs a Ride</a></td><td>1947</td><td>Felix E. Feist</td></tr>
+                    <tr><td>84</td><td><a href="{% url 'resenia_Pelicula' 704 %}">Thieves' Highway</a></td><td>1949</td><td>Jules Dassin</td></tr>
+                    <tr><td>85</td><td><a href="{% url 'resenia_Pelicula' 813 %}">The Chase</a></td><td>1946</td><td>Arthur Ripley</td></tr>
+                    <tr><td>86</td><td><a href="{% url 'resenia_Pelicula' 820 %}">Cape Fear</a></td><td>1962</td><td>J. Lee Thompson</td></tr>
+                    <tr><td>87</td><td><a href="{% url 'resenia_Pelicula' 604 %}">The Blue Dahlia</a></td><td>1946</td><td>George Marshall</td></tr>
+                    <tr><td>88</td><td><a href="{% url 'resenia_Pelicula' 632 %}">Scandal Sheet</a></td><td>1952</td><td>Phil Karlson</td></tr>
+                    <tr><td>89</td><td><a href="{% url 'resenia_Pelicula' 825 %}">Suddenly</a></td><td>1954</td><td>Lewis Allen</td></tr>
+                    <tr><td>90</td><td><a href="{% url 'resenia_Pelicula' 728 %}">The Blue Gardenia</a></td><td>1953</td><td>Fritz Lang</td></tr>
+                    <tr><td>91</td><td><a href="{% url 'resenia_Pelicula' 535 %}">Fallen Angel</a></td><td>1945</td><td>Otto Preminger</td></tr>
+                    <tr><td>92</td><td><a href="{% url 'resenia_Pelicula' 747 %}">Alias Nick Beal</a></td><td>1949</td><td>John Farrow</td></tr>
+                    <tr><td>93</td><td><a href="{% url 'resenia_Pelicula' 818 %}">Conflict</a></td><td>1945</td><td>Curtis Bernhardt</td></tr>
+                    <tr><td>94</td><td><a href="{% url 'resenia_Pelicula' 665 %}">City That Never Sleeps</a></td><td>1953</td><td>John H. Auer</td></tr>
+                    <tr><td>95</td><td><a href="{% url 'resenia_Pelicula' 585 %}">Shock</a></td><td>1946</td><td>Alfred L. Werker</td></tr>
+                    <tr><td>96</td><td><a href="{% url 'resenia_Pelicula' 602 %}">99 River Street</a></td><td>1953</td><td>Phil Karlson</td></tr>
+                    <tr><td>97</td><td><a href="{% url 'resenia_Pelicula' 655 %}">They Live by Night</a></td><td>1948</td><td>Nicholas Ray</td></tr>
+                    <tr><td>98</td><td><a href="{% url 'resenia_Pelicula' 538 %}">The Seventh Victim</a></td><td>1943</td><td>Mark Robson</td></tr>
+                    <tr><td>99</td><td><a href="{% url 'resenia_Pelicula' 630 %}">Cry of the City</a></td><td>1948</td><td>Robert Siodmak</td></tr>
+                    <tr><td>100</td><td><a href="{% url 'resenia_Pelicula' 840 %}">High Wall</a></td><td>1947</td><td>Curtis Bernhardt</td></tr>
+                    <tr><td>101</td><td><a href="{% url 'resenia_Pelicula' 631 %}">The Phenix City Story</a></td><td>1955</td><td>Phil Karlson</td></tr>
+                    <tr><td>102</td><td><a href="{% url 'resenia_Pelicula' 661 %}">The File on Thelma Jordon</a></td><td>1950</td><td>Robert Siodmak</td></tr>
+                    <tr><td>103</td><td><a href="{% url 'resenia_Pelicula' 819 %}">Roadblock</a></td><td>1951</td><td>Harold Daniels</td></tr>
+                    <tr><td>104</td><td><a href="{% url 'resenia_Pelicula' 528 %}">The Set-Up</a></td><td>1949</td><td>Robert Wise</td></tr>
+                    <tr><td>105</td><td><a href="{% url 'resenia_Pelicula' 549 %}">Leave Her to Heaven</a></td><td>1945</td><td>John M. Stahl</td></tr>
+                    <tr><td>106</td><td><a href="{% url 'resenia_Pelicula' 594 %}">The Postman Always Rings Twice</a></td><td>1946</td><td>Tay Garnett</td></tr>
+                    <tr><td>107</td><td><a href="{% url 'resenia_Pelicula' 756 %}">711 Ocean Drive</a></td><td>1950</td><td>Joseph M. Newman</td></tr>
+                    <tr><td>108</td><td><a href="{% url 'resenia_Pelicula' 852 %}">Without Warning!</a></td><td>1952</td><td>Arnold Laven</td></tr>
+                    <tr><td>109</td><td><a href="{% url 'resenia_Pelicula' 589 %}">He Walked by Night</a></td><td>1948</td><td>Alfred L. Werker</td></tr>
+                    <tr><td>110</td><td><a href="{% url 'resenia_Pelicula' 738 %}">Possessed</a></td><td>1947</td><td>Curtis Bernhardt</td></tr>
+                    <tr><td>111</td><td><a href="{% url 'resenia_Pelicula' 502 %}">The Woman in the Window</a></td><td>1944</td><td>Fritz Lang</td></tr>
+                    <tr><td>112</td><td><a href="{% url 'resenia_Pelicula' 647 %}">Raw Deal</a></td><td>1948</td><td>Anthony Mann</td></tr>
+                    <tr><td>113</td><td><a href="{% url 'resenia_Pelicula' 725 %}">Kiss the Blood Off My Hands</a></td><td>1948</td><td>Norman Foster</td></tr>
+                    <tr><td>114</td><td><a href="{% url 'resenia_Pelicula' 851 %}">Tomorrow Is Another Day</a></td><td>1951</td><td>Felix E. Feist</td></tr>
+                    <tr><td>115</td><td><a href="{% url 'resenia_Pelicula' 826 %}">Try and Get Me!</a></td><td>1950</td><td>Cy Endfield</td></tr>
+                    <tr><td>116</td><td><a href="{% url 'resenia_Pelicula' 774 %}">So Evil My Love</a></td><td>1948</td><td>Lewis Allen</td></tr>
+                    <tr><td>117</td><td><a href="{% url 'resenia_Pelicula' 823 %}">The Dark Corner</a></td><td>1946</td><td>Henry Hathaway</td></tr>
+                    <tr><td>118</td><td><a href="{% url 'resenia_Pelicula' 714 %}">All My Sons</a></td><td>1948</td><td>Irving Reis</td></tr>
+                    <tr><td>119</td><td><a href="{% url 'resenia_Pelicula' 865 %}">The Threat</a></td><td>1949</td><td>Felix E. Feist</td></tr>
+                    <tr><td>120</td><td><a href="{% url 'resenia_Pelicula' 565 %}">He Ran All the Way</a></td><td>1951</td><td>John Berry</td></tr>
+                    <tr><td>121</td><td><a href="{% url 'resenia_Pelicula' 579 %}">The Enforcer</a></td><td>1951</td><td>Bretaigne Windust</td></tr>
+                    <tr><td>122</td><td><a href="{% url 'resenia_Pelicula' 822 %}">Impact</a></td><td>1949</td><td>Arthur Lubin</td></tr>
+                    <tr><td>123</td><td><a href="{% url 'resenia_Pelicula' 556 %}">The Hitch-Hiker</a></td><td>1953</td><td>Ida Lupino</td></tr>
+                    <tr><td>124</td><td><a href="{% url 'resenia_Pelicula' 625 %}">Born to Kill</a></td><td>1947</td><td>Robert Wise</td></tr>
+                    <tr><td>125</td><td><a href="{% url 'resenia_Pelicula' 701 %}">Dark City</a></td><td>1950</td><td>William Dieterle</td></tr>
+                    <tr><td>126</td><td><a href="{% url 'resenia_Pelicula' 854 %}">The Locket</a></td><td>1946</td><td>John Brahm</td></tr>
+                    <tr><td>127</td><td><a href="{% url 'resenia_Pelicula' 638 %}">Cornered</a></td><td>1945</td><td>Edward Dmytryk</td></tr>
+                    <tr><td>128</td><td><a href="{% url 'resenia_Pelicula' 843 %}">The Underworld Story</a></td><td>1950</td><td>Cy Endfield</td></tr>
+                    <tr><td>129</td><td><a href="{% url 'resenia_Pelicula' 891 %}">Hoodlum Empire</a></td><td>1952</td><td>Joseph Kane</td></tr>
+                    <tr><td>130</td><td><a href="{% url 'resenia_Pelicula' 553 %}">Union Station</a></td><td>1950</td><td>Rudolph Maté</td></tr>
+                    <tr><td>131</td><td><a href="{% url 'resenia_Pelicula' 877 %}">Cry Vengeance</a></td><td>1954</td><td>Mark Stevens</td></tr>
+                    <tr><td>132</td><td><a href="{% url 'resenia_Pelicula' 887 %}">Hollow Triumph</a></td><td>1948</td><td>Steve Sekely</td></tr>
+                    <tr><td>133</td><td><a href="{% url 'resenia_Pelicula' 636 %}">Pitfall</a></td><td>1948</td><td>André De Toth</td></tr>
+                    <tr><td>134</td><td><a href="{% url 'resenia_Pelicula' 542 %}">The Naked City</a></td><td>1948</td><td>Jules Dassin</td></tr>
+                    <tr><td>135</td><td><a href="{% url 'resenia_Pelicula' 899 %}">Blast of Silence</a></td><td>1961</td><td>Allen Baron</td></tr>
+                    <tr><td>136</td><td><a href="{% url 'resenia_Pelicula' 782 %}">Among the Living</a></td><td>1941</td><td>Stuart Heisler</td></tr>
+                    <tr><td>137</td><td><a href="{% url 'resenia_Pelicula' 668 %}">Woman in Hiding</a></td><td>1950</td><td>Michael Gordon</td></tr>
+                    <tr><td>138</td><td><a href="{% url 'resenia_Pelicula' 833 %}">Desperate</a></td><td>1947</td><td>Anthony Mann</td></tr>
+                    <tr><td>139</td><td><a href="{% url 'resenia_Pelicula' 727 %}">Cry Danger</a></td><td>1951</td><td>Robert Parrish</td></tr>
+                    <tr><td>140</td><td><a href="{% url 'resenia_Pelicula' 588 %}">Beyond a Reasonable Doubt</a></td><td>1956</td><td>Fritz Lang</td></tr>
+                    <tr><td>141</td><td><a href="{% url 'resenia_Pelicula' 868 %}">Bodyguard</a></td><td>1948</td><td>Richard Fleischer</td></tr>
+                    <tr><td>142</td><td><a href="{% url 'resenia_Pelicula' 709 %}">The Reckless Moment</a></td><td>1949</td><td>Max Ophüls</td></tr>
+                    <tr><td>143</td><td><a href="{% url 'resenia_Pelicula' 623 %}">Johnny O'Clock</a></td><td>1947</td><td>Robert Rossen</td></tr>
+                    <tr><td>144</td><td><a href="{% url 'resenia_Pelicula' 689 %}">My Name Is Julia Ross</a></td><td>1945</td><td>Joseph H. Lewis</td></tr>
+                    <tr><td>145</td><td><a href="{% url 'resenia_Pelicula' 734 %}">The Suspect</a></td><td>1944</td><td>Robert Siodmak</td></tr>
+                    <tr><td>146</td><td><a href="{% url 'resenia_Pelicula' 672 %}">Night Has a Thousand Eyes</a></td><td>1948</td><td>John Farrow</td></tr>
+                    <tr><td>147</td><td><a href="{% url 'resenia_Pelicula' 842 %}">The Man Who Cheated Himself</a></td><td>1950</td><td>Felix E. Feist</td></tr>
+                    <tr><td>148</td><td><a href="{% url 'resenia_Pelicula' 735 %}">Moonrise</a></td><td>1948</td><td>Frank Borzage</td></tr>
+                    <tr><td>149</td><td><a href="{% url 'resenia_Pelicula' 847 %}">Hangover Square</a></td><td>1945</td><td>John Brahm</td></tr>
+                    <tr><td>150</td><td><a href="{% url 'resenia_Pelicula' 722 %}">A Kiss Before Dying</a></td><td>1956</td><td>Gerd Oswald</td></tr>
+                    <tr><td>151</td><td><a href="{% url 'resenia_Pelicula' 886 %}">Cause for Alarm!</a></td><td>1951</td><td>Tay Garnett</td></tr>
+                    <tr><td>152</td><td><a href="{% url 'resenia_Pelicula' 663 %}">Side Street</a></td><td>1949</td><td>Anthony Mann</td></tr>
+                    <tr><td>153</td><td><a href="{% url 'resenia_Pelicula' 867 %}">Appointment with Danger</a></td><td>1951</td><td>Lewis Allen</td></tr>
+                    <tr><td>154</td><td><a href="{% url 'resenia_Pelicula' 578 %}">Caught</a></td><td>1949</td><td>Max Ophüls</td></tr>
+                    <tr><td>155</td><td><a href="{% url 'resenia_Pelicula' 634 %}">Crime Wave</a></td><td>1954</td><td>André De Toth</td></tr>
+                    <tr><td>156</td><td><a href="{% url 'resenia_Pelicula' 711 %}">Ministry of Fear</a></td><td>1944</td><td>Fritz Lang</td></tr>
+                    <tr><td>157</td><td><a href="{% url 'resenia_Pelicula' 590 %}">Human Desire</a></td><td>1954</td><td>Fritz Lang</td></tr>
+                    <tr><td>158</td><td><a href="{% url 'resenia_Pelicula' 850 %}">The Damned Don't Cry</a></td><td>1950</td><td>Vincent Sherman</td></tr>
+                    <tr><td>159</td><td><a href="{% url 'resenia_Pelicula' 568 %}">Detective Story</a></td><td>1951</td><td>William Wyler</td></tr>
+                    <tr><td>160</td><td><a href="{% url 'resenia_Pelicula' 811 %}">High Tide</a></td><td>1947</td><td>John Reinhardt</td></tr>
+                    <tr><td>161</td><td><a href="{% url 'resenia_Pelicula' 687 %}">The Brothers Rico</a></td><td>1957</td><td>Phil Karlson</td></tr>
+                    <tr><td>162</td><td><a href="{% url 'resenia_Pelicula' 873 %}">Tension</a></td><td>1949</td><td>John Berry</td></tr>
+                    <tr><td>163</td><td><a href="{% url 'resenia_Pelicula' 788 %}">The Killer Is Loose</a></td><td>1956</td><td>Budd Boetticher</td></tr>
+                    <tr><td>164</td><td><a href="{% url 'resenia_Pelicula' 695 %}">The Dark Mirror</a></td><td>1946</td><td>Robert Siodmak</td></tr>
+                    <tr><td>165</td><td><a href="{% url 'resenia_Pelicula' 895 %}">Hell Bound</a></td><td>1957</td><td>William J. Hole Jr.</td></tr>
+                    <tr><td>166</td><td><a href="{% url 'resenia_Pelicula' 839 %}">Quicksand</a></td><td>1950</td><td>Irving Pichel</td></tr>
+                    <tr><td>167</td><td><a href="{% url 'resenia_Pelicula' 705 %}">I Walk Alone</a></td><td>1947</td><td>Byron Haskin</td></tr>
+                    <tr><td>168</td><td><a href="{% url 'resenia_Pelicula' 892 %}">The Killer That Stalked New York</a></td><td>1950</td><td>Earl McEvoy</td></tr>
+                    <tr><td>169</td><td><a href="{% url 'resenia_Pelicula' 761 %}">The Web</a></td><td>1947</td><td>Michael Gordon</td></tr>
+                    <tr><td>170</td><td><a href="{% url 'resenia_Pelicula' 860 %}">The Street with No Name</a></td><td>1948</td><td>William Keighley</td></tr>
+                    <tr><td>171</td><td><a href="{% url 'resenia_Pelicula' 856 %}">Female on the Beach</a></td><td>1955</td><td>Joseph Pevney</td></tr>
+                    <tr><td>172</td><td><a href="{% url 'resenia_Pelicula' 763 %}">The Woman on the Beach</a></td><td>1947</td><td>Jean Renoir</td></tr>
+                    <tr><td>173</td><td><a href="{% url 'resenia_Pelicula' 921 %}">The Las Vegas Story</a></td><td>1952</td><td>Robert Stevenson</td></tr>
+                    <tr><td>174</td><td><a href="{% url 'resenia_Pelicula' 569 %}">The Desperate Hours</a></td><td>1955</td><td>William Wyler</td></tr>
+                    <tr><td>175</td><td><a href="{% url 'resenia_Pelicula' 791 %}">Repeat Performance</a></td><td>1947</td><td>Alfred L. Werker</td></tr>
+                    <tr><td>176</td><td><a href="{% url 'resenia_Pelicula' 906 %}">Split Second</a></td><td>1953</td><td>Dick Powell</td></tr>
+                    <tr><td>177</td><td><a href="{% url 'resenia_Pelicula' 882 %}">Storm Fear</a></td><td>1955</td><td>Cornel Wilde</td></tr>
+                    <tr><td>178</td><td><a href="{% url 'resenia_Pelicula' 864 %}">Pursued</a></td><td>1947</td><td>Raoul Walsh</td></tr>
+                    <tr><td>179</td><td><a href="{% url 'resenia_Pelicula' 880 %}">Decoy</a></td><td>1946</td><td>Jack Bernhard</td></tr>
+                    <tr><td>180</td><td><a href="{% url 'resenia_Pelicula' 874 %}">Night Editor</a></td><td>1946</td><td>Henry Levin</td></tr>
+                    <tr><td>181</td><td><a href="{% url 'resenia_Pelicula' 656 %}">Trapped</a></td><td>1949</td><td>Richard Fleischer</td></tr>
+                    <tr><td>182</td><td><a href="{% url 'resenia_Pelicula' 881 %}">Where Danger Lives</a></td><td>1950</td><td>John Farrow</td></tr>
+                    <tr><td>183</td><td><a href="{% url 'resenia_Pelicula' 903 %}">Railroaded!</a></td><td>1947</td><td>Anthony Mann</td></tr>
+                    <tr><td>184</td><td><a href="{% url 'resenia_Pelicula' 937 %}">Follow Me Quietly</a></td><td>1949</td><td>Richard Fleischer</td></tr>
+                    <tr><td>185</td><td>Destiny</td><td>1944</td><td>Reginald Le Borg</td></tr>
+                    <tr><td>186</td><td><a href="{% url 'resenia_Pelicula' 896 %}">Strange Impersonation</a></td><td>1946</td><td>Anthony Mann</td></tr>
+                    <tr><td>187</td><td><a href="{% url 'resenia_Pelicula' 598 %}">Woman on the Run</a></td><td>1950</td><td>Norman Foster</td></tr>
+                    <tr><td>188</td><td><a href="{% url 'resenia_Pelicula' 875 %}">Private Hell 36</a></td><td>1954</td><td>Don Siegel</td></tr>
+                    <tr><td>189</td><td><a href="{% url 'resenia_Pelicula' 651 %}">Armored Car Robbery</a></td><td>1950</td><td>Richard Fleischer</td></tr>
+                    <tr><td>190</td><td><a href="{% url 'resenia_Pelicula' 919 %}">Shack Out on 101</a></td><td>1955</td><td>Edward Dein</td></tr>
+                    <tr><td>191</td><td><a href="{% url 'resenia_Pelicula' 890 %}">The Crooked Way</a></td><td>1949</td><td>Robert Florey</td></tr>
+                    <tr><td>192</td><td><a href="{% url 'resenia_Pelicula' 920 %}">The Accused</a></td><td>1949</td><td>William Dieterle</td></tr>
+                    <tr><td>193</td><td><a href="{% url 'resenia_Pelicula' 812 %}">The Lady Gambles</a></td><td>1949</td><td>Michael Gordon</td></tr>
+                    <tr><td>194</td><td><a href="{% url 'resenia_Pelicula' 731 %}">I Want to Live!</a></td><td>1958</td><td>Robert Wise</td></tr>
+                    <tr><td>195</td><td><a href="{% url 'resenia_Pelicula' 677 %}">Murder by Contract</a></td><td>1958</td><td>Irving Lerner</td></tr>
+                    <tr><td>196</td><td><a href="{% url 'resenia_Pelicula' 950 %}">Danger Signal</a></td><td>1945</td><td>Robert Florey</td></tr>
+                    <tr><td>197</td><td><a href="{% url 'resenia_Pelicula' 898 %}">The Strange Affair of Uncle Harry</a></td><td>1945</td><td>Robert Siodmak</td></tr>
+                    <tr><td>198</td><td><a href="{% url 'resenia_Pelicula' 866 %}">Big House, U.S.A.</a></td><td>1955</td><td>Howard W. Koch</td></tr>
+                    <tr><td>199</td><td><a href="{% url 'resenia_Pelicula' 879 %}">Flesh and Fantasy</a></td><td>1943</td><td>Julien Duvivier</td></tr>
+                    <tr><td>200</td><td><a href="{% url 'resenia_Pelicula' 748 %}">Strangers in the Night</a></td><td>1944</td><td>Anthony Mann</td></tr>
+                    <tr><td>201</td><td><a href="{% url 'resenia_Pelicula' 888 %}">Abandoned</a></td><td>1949</td><td>Joseph M. Newman</td></tr>
+                    <tr><td>202</td><td><a href="{% url 'resenia_Pelicula' 532 %}">Killer's Kiss</a></td><td>1955</td><td>Stanley Kubrick</td></tr>
+                    <tr><td>203</td><td><a href="{% url 'resenia_Pelicula' 913 %}">Shield for Murder</a></td><td>1954</td><td>Howard W. Koch, Edmond O'Brien</td></tr>
+                    <tr><td>204</td><td><a href="{% url 'resenia_Pelicula' 787 %}">Clash by Night</a></td><td>1952</td><td>Fritz Lang</td></tr>
+                    <tr><td>205</td><td><a href="{% url 'resenia_Pelicula' 894 %}">Southside 1-1000</a></td><td>1950</td><td>Boris Ingster</td></tr>
+                    <tr><td>206</td><td><a href="{% url 'resenia_Pelicula' 901 %}">The Price of Fear</a></td><td>1956</td><td>Abner Biberman</td></tr>
+                    <tr><td>207</td><td><a href="{% url 'resenia_Pelicula' 758 %}">Deported</a></td><td>1950</td><td>Robert Siodmak</td></tr>
+                    <tr><td>208</td><td><a href="{% url 'resenia_Pelicula' 713 %}">Murder Is My Beat</a></td><td>1955</td><td>Edgar G. Ulmer</td></tr>
+                    <tr><td>209</td><td><a href="{% url 'resenia_Pelicula' 607 %}">Dark Passage</a></td><td>1947</td><td>Delmer Daves</td></tr>
+                    <tr><td>210</td><td><a href="{% url 'resenia_Pelicula' 938 %}">When Strangers Marry</a></td><td>1944</td><td>William Castle</td></tr>
+                    <tr><td>211</td><td><a href="{% url 'resenia_Pelicula' 809 %}">Dial 1119</a></td><td>1950</td><td>Gerald Mayer</td></tr>
+                    <tr><td>212</td><td><a href="{% url 'resenia_Pelicula' 900 %}">Portrait of Jennie</a></td><td>1948</td><td>William Dieterle</td></tr>
+                    <tr><td>213</td><td><a href="{% url 'resenia_Pelicula' 645 %}">Deadline - U.S.A.</a></td><td>1952</td><td>Richard Brooks</td></tr>
+                    <tr><td>214</td><td><a href="{% url 'resenia_Pelicula' 626 %}">5 Against the House</a></td><td>1955</td><td>Phil Karlson</td></tr>
+                    <tr><td>215</td><td><a href="{% url 'resenia_Pelicula' 902 %}">Smooth as Silk</a></td><td>1946</td><td>Charles Barton</td></tr>
+                    <tr><td>216</td><td><a href="{% url 'resenia_Pelicula' 862 %}">Boomerang!</a></td><td>1947</td><td>Elia Kazan</td></tr>
+                    <tr><td>217</td><td><a href="{% url 'resenia_Pelicula' 706 %}">Black Angel</a></td><td>1946</td><td>Roy William Neill</td></tr>
+                    <tr><td>218</td><td><a href="{% url 'resenia_Pelicula' 838 %}">New Orleans Uncensored</a></td><td>1955</td><td>William Castle</td></tr>
+                    <tr><td>219</td><td><a href="{% url 'resenia_Pelicula' 858 %}">Hollywood Story</a></td><td>1951</td><td>William Castle</td></tr>
+                    <tr><td>220</td><td><a href="{% url 'resenia_Pelicula' 857 %}">I Wouldn't Be in Your Shoes</a></td><td>1948</td><td>William Nigh</td></tr>
+                    <tr><td>221</td><td><a href="{% url 'resenia_Pelicula' 876 %}">Step by Step</a></td><td>1946</td><td>Phil Rosen</td></tr>
+                    <tr><td>222</td><td><a href="{% url 'resenia_Pelicula' 845 %}">M</a></td><td>1951</td><td>Joseph Losey</td></tr>
+                    <tr><td>223</td><td><a href="{% url 'resenia_Pelicula' 863 %}">A Woman's Secret</a></td><td>1949</td><td>Nicholas Ray</td></tr>
+                    <tr><td>224</td><td><a href="{% url 'resenia_Pelicula' 861 %}">The Tattooed Stranger</a></td><td>1950</td><td>Edward Montagne</td></tr>
+                    <tr><td>225</td><td><a href="{% url 'resenia_Pelicula' 752 %}">The Sleeping City</a></td><td>1950</td><td>George Sherman</td></tr>
+                    <tr><td>226</td><td><a href="{% url 'resenia_Pelicula' 808 %}">The Guilty</a></td><td>1947</td><td>John Reinhardt</td></tr>
+                    <tr><td>227</td><td><a href="{% url 'resenia_Pelicula' 855 %}">So Dark the Night</a></td><td>1946</td><td>Joseph H. Lewis</td></tr>
+                    <tr><td>228</td><td><a href="{% url 'resenia_Pelicula' 859 %}">His Kind of Woman</a></td><td>1951</td><td>John Farrow</td></tr>
+                    <tr><td>229</td><td><a href="{% url 'resenia_Pelicula' 835 %}">Hidden Fear</a></td><td>1957</td><td>André De Toth</td></tr>
+                    <tr><td>230</td><td><a href="{% url 'resenia_Pelicula' 897 %}">Fall Guy</a></td><td>1947</td><td>Reginald Le Borg</td></tr>
+                    <tr><td>231</td><td><a href="{% url 'resenia_Pelicula' 739 %}">Born to Be Bad</a></td><td>1950</td><td>Nicholas Ray</td></tr>
+                    <tr><td>232</td><td><a href="{% url 'resenia_Pelicula' 609 %}">The Big Steal</a></td><td>1949</td><td>Don Siegel</td></tr>
+                    <tr><td>233</td><td><a href="{% url 'resenia_Pelicula' 870 %}">Blonde Ice</a></td><td>1948</td><td>Jack Bernhard</td></tr>
+                    <tr><td>234</td><td><a href="{% url 'resenia_Pelicula' 794 %}">Lady in the Lake</a></td><td>1947</td><td>Robert Montgomery</td></tr>
+                    
+                </table>
+                
+                                   
+            </div>
+                    
+        </div>
+
+    </div>
+
+</div> 
+
+{% endblock %}

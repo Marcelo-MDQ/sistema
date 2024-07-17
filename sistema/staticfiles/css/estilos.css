@@ -1,0 +1,88 @@
+/* padding al main porque uso menu top fixed */
+/*
+main { padding-top: 70px;
+padding-bottom: 70px; }
+*/
+
+/* para las reviews */
+.column {
+	width: 100%;
+	justify-content: center;
+}
+
+.column--50 {
+	width: 45%;
+}
+
+/* cajita */
+.cajita {
+ 	width: 2800px;
+	height: 160px;
+	padding: 2px;
+    object-fit: none;
+}
+
+.cajita:hover {
+    object-fit: cover;
+}
+
+
+/* avataractor */
+.avataractor {
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	float: right;
+ }
+
+ 
+/* imagen izquierda en las reseñas */
+.img-review {
+    width: 100%;
+    padding-left: 10px;
+    float: right;
+    margin-right: 20px;
+}
+  
+.img-review-abajo {
+	height: 190px;
+	object-fit: cover;
+	padding: 10px;
+}  
+
+.img-review-abajo:hover{
+    transform: scale(1.1);
+    transition: .2s;
+        z-index: 1000;
+}
+
+.contenedor-imgs-abajo {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+/* FOOTER */
+footer .contenedor-footer {
+	width: 100%;
+	color: #343a40;
+	background: #000;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.footer-texto {
+	font-size: 20px;
+	margin-bottom: 1rem; /* para coincidir con Bootstrap */
+}
+
+
+
+

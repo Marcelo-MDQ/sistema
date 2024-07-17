@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title" align="center">Favoritas</h4>
+        
+        <div class="row justify-content-md-center">
+                    {% for pelicula in peliculas %}
+                        <div class="col-md-auto">
+                            <a href="{% url 'resenia_Pelicula' pelicula.id %}">
+
+                            {% load static %}
+                            {% if pelicula.color %}
+                                <img class="cajita" src="{% static pelicula.imagenlocal %}" >
+                            {% else %}
+                                <img class="cajita filtro-bn" src="{% static pelicula.imagenlocal %}" >
+                            {% endif %}
+                        </a>                        
+                        </div>
+                    {% endfor %}
+        </div>
+
+        <!-- antes tenía 
+         <div class="container" align="center" paddin>
+                    <p >
+                    {% for pelicula in peliculas %}
+                        <a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                            <img class="cajita" src="{{pelicula.imagen}}"  >
+                            </a>
+                        
+                    {% endfor %}
+                    </p>
+        </div>       
+        -->
+
+    </div>
+
+</div> 
+
+{% endblock %}

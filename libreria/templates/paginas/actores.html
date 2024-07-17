@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block titulo %} Actores {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        
+        <h4 class="card-title" align="center">ELLAS</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in cracks_f_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>
+
+        <h4 class="card-title" align="center">ELLOS</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in cracks_m_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>  
+
+        <h4 class="card-title" align="center">DESTACADAS</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in primeralinea_f_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>
+
+        <h4 class="card-title" align="center">DESTACADOS</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in primeralinea_m_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>  
+        
+        <h4 class="card-title" align="center">SECUNDARIOS</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in secundario_m_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>  
+        
+        <h4 class="card-title" align="center">LOS DE UNA PELICULA</h4>
+        <div class="row justify-content-md-center">
+            {% for actor_img in una_pelicula_imgs %}
+                <div class="col-md-auto">
+                    <a href="{% url 'buscar_actor' actor_img.nombreactor %}">
+                    {% load static %}
+                    <img class="avataractor_chico" src="{% static actor_img.imagenactor %}" >
+                    </a>
+                </div>
+            {% endfor %}        
+        </div>
+        <br><br>
+
+ 
+        <!--
+        <div class="row justify-content-md-center">
+                    {% for actor in actores %}
+                        <div class="col-md-auto"><a href="{% url 'buscar_actor' actor %}">{{ actor }}</a>
+                        </div>
+                    {% endfor %}
+        </div>
+        -->
+        
+    </div>
+
+</div> 
+
+{% endblock %}

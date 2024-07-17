@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block titulo %} El Film Noir {% endblock %}
+
+{% block contenido %} 
+
+<div class="container" >
+    <br/>
+    <div class="row">
+
+        <div class="col-6">
+            {% load static %}
+            <img src="{% static 'img/James-Ellroy.jpg' %}" width="100%" float="right" >
+        </div>
+        <div class="col-6">
+            <h2>¿Qué es el Film Noir?</h2>
+            <p>"Es un movimiento de cine puro, genéricamente estadounidense que se dio de 1945 a 1958 que tenía un gran tema. 
+            Y el tema es... acabas de conocer a una mujer estás a un paso del mejor sexo de tu vida pero después de seis 
+            semanas de conocerla te culparán por un crimen que no cometiste y terminarás en la cámara de gas. 
+            Y mientras te atan las correas y estás a punto de respirar cianuro agradeces las semanas que pasaste con ella 
+            y tu propia muerte."</p>
+            <p><b><h2>&nbsp;&nbsp;&nbsp;&nbsp;James Ellroy</h2></b> &nbsp;&nbsp;&nbsp;&nbsp;en el documental 
+                <a target="_blank" href="https://www.youtube.com/watch?v=imYJxOOfsm4"><i>"Film Noir bringing darkness to light"</i></a></p></div>
+        </div>
+    </div>
+    </br>
+
+    <div class="row">
+        <div class="col-8">
+            <p>Es correcto lo que dice Ellroy, uno de los grandes escritores de novela
+                negra de la historia, pero está describiendo un tipo de noir, quizás el más característico,
+                pero ¿de dónde salió el término noir para describir este género? <br>
+                El término NOIR se lo debemos al crítico 
+                <b>Nino Frank</b> que lo menciona en su artículo de agosto de 1946 del número 61 de L'Ecran français.
+                Bajo el título: <b>"Un nuevo género policiaco: la aventura criminal"</b>, Nino Frank 
+                definió así algunas películas americanas, recién estrenadas en Francia, 
+                que le parecían mostrar de manera diferente la violencia física y los 
+                actos delictivos. <br>
+                Las designó como obras de psicología criminal e insistió en 
+                su manera de explotar brillantemente un dinamismo de muerte violenta.<br>
+                Fue durante el verano de 1946 cuando el público francés tuvo la revelación de un 
+                nuevo tipo de cine americano. En pocas semanas, desde mediados de julio hasta finales
+                 de agosto, se sucedieron en las pantallas parisinas cuatro  películas que dieron 
+                 comienzo al noir: <br>
+
+                 <!-- 
+                 para local
+                 <a href="resenia/11/">THE MALTESE FALCON</a> de John Huston, <br>
+                 <a href="resenia/7/">LAURA</a> de Otto Preminger, <br>
+                 <a href="resenia/24/">MURDER, MY SWEET</a> de Edward Dmytrick y<br>
+                 <a href="resenia/23/">DOUBLE INDEMNITY</a> de Billy Wilder.
+                    
+                 para produccion 
+                 <a href="resenia/511/">THE MALTESE FALCON</a> de John Huston, <br>
+                 <a href="resenia/507/">LAURA</a> de Otto Preminger, <br>
+                 <a href="resenia/524/">MURDER, MY SWEET</a> de Edward Dmytrick y<br>
+                 <a href="resenia/523/">DOUBLE INDEMNITY</a> de Billy Wilder.
+                 -->
+
+                 <a href="resenia/511/">THE MALTESE FALCON</a> de John Huston, <br>
+                 <a href="resenia/507/">LAURA</a> de Otto Preminger, <br>
+                 <a href="resenia/524/">MURDER, MY SWEET</a> de Edward Dmytrick y<br>
+                 <a href="resenia/523/">DOUBLE INDEMNITY</a> de Billy Wilder.
+                 
+
+            </p>
+            <p>Fuente: <a target="_blank" href="https://moncinemaamoi.blog/2016/08/28/laventure-criminelle-par-nino-frank/">
+                mon cinéma à moi</a></p>
+        </div>
+        <div class="col-4">
+            {% load static %}
+            <img src="{% static 'img/Nino-Frank.jpg' %}" width="100%" float="left" >
+        </div>
+    </div>
+    </br>
+
+    <div class="row">
+        {% load static %}
+        <img src="{% static 'img/Primera-Nota.jpg' %}" width="100%" float="center" >
+        <p align="center">Artículo original publicado el 28 de agosto de 1946 en el número 61 de L'Ecran français.</p>
+    </div>
+
+
+</div>        
+
+{% endblock %}

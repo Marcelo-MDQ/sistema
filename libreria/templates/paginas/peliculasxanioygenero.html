@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Películas ordenadas por género y año ({{ cantidad_total }})</h4>
+        <a class="btn btn-secondary" href="{% url 'peliculascajitas' %}" role="button">
+            POSTERS</a>
+        <a class="btn btn-secondary" href="{% url 'peliculas' %}" role="button">
+            ORDENADAS ALFABETICAMENTE</a>
+        <a class="btn btn-secondary" href="{% url 'peliculasxordenresenia' %}" role="button">
+            ORDENADAS POR FECHA DE RESEÑA</a>
+        </br></br>
+        
+        <h4 class="card-title">NO NOIR ({{ cantidad_nonoir }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_nonoir %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+        <h4 class="card-title">PRE NOIR ({{ cantidad_prenoir }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_prenoir %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+        <h4 class="card-title">NOIR ({{ cantidad_noir }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_noir %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+        <h4 class="card-title">POST NOIR ({{ cantidad_postnoir }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_postnoir %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+        <h4 class="card-title">POLAR ({{ cantidad_polar }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_polar %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+       <h4 class="card-title">NEO NOIR ({{ cantidad_neonoir }})</h4>
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas_neonoir %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+        </div></br>
+
+    </div>
+
+</div> 
+
+{% endblock %}

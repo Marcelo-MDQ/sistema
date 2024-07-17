@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block titulo %} Film Noir {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+
+    <main role="main" class="container">
+        
+      <div class="row">
+
+        <div class="col-md-7 ">
+
+          </br>
+          <h4 class="card-title" align="left">La última película reseñada</h4>
+          <div class="mt-4 p-4 bg-dark text-white rounded">
+            <div class="col-md-12 px-0">
+      
+                  <h1 class="display-8 font-italic">{{ peliculaultima.nombre }} ({{ peliculaultima.anio }})</h1>
+
+                  {% if peliculaultima.imagenlocal %}
+                      {% load static %}
+                      {% if peliculaultima.color %}
+                          <img src="{% static peliculaultima.imagenlocal %}" width="100%" float="right" srcset="">
+                      {% else %}
+                          <img class="filtro-bn" src="{% static peliculaultima.imagenlocal %}" width="100%" float="right" srcset="">
+                      {% endif %}     
+                      {% else %}
+                          <img src="" width="100%" float="right" srcset="">
+                  {% endif %}
+
+                  <p class="lead my-3">{{ peliculaultimatexto }}</p> 
+                  <p class="lead mb-0">
+                    <a href="{% url 'resenia_Pelicula' peliculaultima.id %}">
+                    Seguir leyendo..</a></p>
+              
+            </div>
+          </div>
+          </br>
+
+          <!--
+          <h4 class="card-title" align="left">Una película al azar</h4>
+          <div class="mt-4 p-4 bg-light text-black rounded">
+            <div class="col-md-12 px-0">
+
+                  <h1 class="display-8 font-italic">{{ peliculaportada.nombre }} ({{ peliculaportada.anio }})</h1>
+                  <p class="lead my-3">{{ peliculaportadatexto }}</p> 
+                  <p class="lead mb-0">
+                    <a href="{% url 'resenia_Pelicula' peliculaportada.id %}">
+                    Seguir leyendo..</a></p>
+              
+            </div>
+          </div>
+          -->
+
+          </br>
+          <div >
+            <h4 class="card-title" align="left">Una nota al azar</h4>
+            <h2 >{{ notaportada.titulo }}</h2>
+            <p >por {{ notaportada.autor }}</p>
+    
+            <p>{{ notaportada.textocorto }}</p>
+            <p><a target="_blank" href="{{ notaportada.enlace }}">Ir a la nota</a></p>
+
+          </div>
+    
+        </div>
+
+    
+        <aside class="col-md-5 ">
+
+              
+            
+            <!--
+            <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="font-italic">FILM NOIR</h4>
+            <p class="mb-0">
+              Un pequeño proyecto que mezcla un curso de programación  
+              (<b>Django</b>, un muy buen framework escrito en Python) y 
+              el cine, la idea original era mirar esas diez o veinte películas esenciales 
+              del cine negro (<b>NOIR</b>), me gustó el género y acá estamos con 
+              más de 300 películas vistas.
+            </p>
+            </div>
+            -->
+    
+            {% if peliculassinresenia %}
+              <div class="p-4 ">
+                <h4 class="font-italic">Vistas aún sin reseñar</h4>
+                    <ol class="list-unstyled">
+                            {% for peliculasinresenia in peliculassinresenia %}
+                              <a href="{% url 'resenia_Pelicula' peliculasinresenia.id %}">
+                              <li>{{ peliculasinresenia.nombre }} ({{ peliculasinresenia.anio }})</li>
+                              </a>
+                            {% endfor %}
+                    </ol>
+              </div>
+            {% endif %}
+
+            {% if peliculasproximamente %}
+              <div class="p-4 bg-light text-black rounded">
+                <h4 class="font-italic">Lo que se viene...</h4>
+                    <ol class="list-unstyled">
+                            {% for peliculasproximamente in peliculasproximamente %}
+                                <a href="{% url 'resenia_Pelicula' peliculasproximamente.id %}">
+                                <li>{{ peliculasproximamente.nombre }} ({{ peliculasproximamente.anio }})</li>
+                                </a>
+                            {% endfor %}
+                    </ol>
+              </div>
+            {% endif %}
+ 
+            <div class="p-4">
+              <h4 class="font-italic">Buenos sitios</h4>
+              <ol class="list-unstyled">
+                  <li><a target="_blank" href="https://filmnoirboard.blogspot.com/">Film Noir Board</a></li>
+                  <li><a target="_blank" href="https://filmnoir.art.blog/">FilmsNoir.Net</a></li>
+                  <li><a target="_blank" href="http://noirestyle.org/forum/portada.php">Noirestyle</a></li>
+                  <li><a target="_blank" href="https://todofilmnoir.home.blog/">Todo Film Noir</a></li>
+                  <li><a target="_blank" href="http://wheredangerlives.blogspot.com/">Where Danger Lives</a></li>
+              </ol>
+            </div>
+
+            <div >
+              <h4 class="card-title" align="left">Una película al azar</h4>
+              <div class="p-4 bg-light text-black rounded">
+                <div class="col-md-12 px-0">
+    
+                      <h1 class="display-8 font-italic">{{ peliculaportada.nombre }} ({{ peliculaportada.anio }})</h1>
+                      <p class="lead my-3">{{ peliculaportadatexto }}</p> 
+                      <p class="lead mb-0">
+                        <a href="{% url 'resenia_Pelicula' peliculaportada.id %}">
+                        Seguir leyendo..</a></p>
+                  
+                </div>
+              </div>
+            </div>
+
+
+        </aside>
+    
+      </div>
+  
+
+      </br>
+      <div class="card-body bg-light text-black rounded">
+        <h4 class="card-title " align="center">Otras películas reseñadas últimamente</h4>
+        <div class="container  " align="center">
+                {% for pelicula in peliculas %}
+                    <a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                        {% load static %}
+                        {% if pelicula.color %}
+                          <img class="cajita" src="{% static pelicula.imagenlocal %}" width="240">
+                        {% else %}
+                          <img class="cajita filtro-bn" src="{% static pelicula.imagenlocal %}" width="240">
+                        {% endif %}
+                        </a>
+                {% endfor %}
+        </div>
+      </div>
+      </br>
+  
+    </main><!-- /.container -->
+
+
+  <!--
+  <footer >
+    <p>
+      <a href="#">Ir arriba</a>
+    </p>
+  </footer>
+  -->
+
+</div> 
+  
+{% endblock %}

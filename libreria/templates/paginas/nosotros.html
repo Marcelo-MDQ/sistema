@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block titulo %} El proyecto {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="container" >
+        <br/>
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                {% load static %}
+                <img src="{% static 'img/El-Proyecto.jpg' %}" width="100%" float="right" >
+                <p align="center">ESTRUCTURA DEL INICIO</br>
+                versión 1.0 abril 2023</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                <h2>El proyecto</h2>
+                <p>Mezcla un curso de programación  
+                    (<b>Django</b>, un muy buen framework escrito en Python) y 
+                    mi pasión por el cine. <br>
+                    Hace tiempo que tenía la idea de meterme en el 
+                    cine negro (<b>NOIR</b>) y comencé por ver esas películas esenciales 
+                    que aparecen en todo ranking del género.<br>
+                    Me gustó mucho, me enganché y acá estamos con 
+                    más de 300 películas vistas, que incluyen el noir clásico, el pre noir, 
+                    el post noir, el neo noir, y también noir de otros países
+                     incluyendo Argentina.<br>
+                    <br>    
+
+                    Marcelo<br>
+                    <a href="mailto:koba_cp@hotmail.com">koba_cp@hotmail.com</a><br></p>
+
+
+            </div>
+        </div>
+        </br>
+        </div>
+    </div>        
+</div>
+
+{% endblock %}

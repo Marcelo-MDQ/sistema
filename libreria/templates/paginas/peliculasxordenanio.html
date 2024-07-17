@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Películas ordenadas por año ({{ cantidad }})</h4>
+        <a class="btn btn-secondary" href="{% url 'peliculascajitas' %}" role="button">
+            POSTERS</a>
+        <a class="btn btn-secondary" href="{% url 'peliculas' %}" role="button">
+            ORDENADAS ALFABETICAMENTE</a>
+        <a class="btn btn-secondary" href="{% url 'peliculasxordenresenia' %}" role="button">
+            ORDENADAS POR FECHA DE RESEÑA</a>
+        </br></br>
+        
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas %}
+                <div class="col-md-auto"><a href="{% url 'resenia_Pelicula' pelicula.id %}">{{ pelicula.nombre }}</a> ({{ pelicula.anio }})
+                </div>
+            {% endfor %}
+
+        </div>
+        
+    </div>
+
+</div> 
+
+{% endblock %}

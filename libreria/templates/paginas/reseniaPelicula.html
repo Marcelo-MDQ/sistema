@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                    {% if peliculas.imagenlocal %}
+                        {% load static %}
+                        {% if peliculas.color %}
+                            <img src="{% static peliculas.imagenlocal %}" width="100%" float="right" srcset="">
+                        {% else %}
+                            <img class="filtro-bn" src="{% static peliculas.imagenlocal %}" width="100%" float="right" srcset="">
+                        {% endif %}     
+                    {% else %}
+                        <img src="" width="100%" float="right" srcset="">
+                    {% endif %}
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                    <h2 class="card-title">{{ peliculas.nombre.upper }}</h2>
+
+                    {% if peliculas.resenia %}
+                        <h4><a href="{% url 'peliculasxpais' peliculas.pais %}">{{ peliculas.pais }}</a> 
+                            <a href="{% url 'buscar_director' peliculas.director %}">{{ peliculas.director}}</a>
+                            , {{ peliculas.anio }} 
+                            <a href="{% url 'peliculasxgenero' peliculas.genero %}">{{ peliculas.genero }}</a>
+                            </h4>
+                            <p>
+                                {% if peliculas.subgenero1 %}
+                                    <a href="{% url 'peliculasxsubgenero' peliculas.subgenero1 %}">{{ peliculas.subgenero1 }}</a>
+                                {% endif %}
+                                {% if peliculas.subgenero2 %}
+                                    <a href="{% url 'peliculasxsubgenero' peliculas.subgenero2 %}">{{ peliculas.subgenero2 }}</a>
+                                {% endif %}
+                                {% if peliculas.subgenero3 %}
+                                    <a href="{% url 'peliculasxsubgenero' peliculas.subgenero3 %}">{{ peliculas.subgenero3 }}</a>
+                                {% endif %}                                                
+                            </p>
+                        <p>
+                            
+                            {% if peliculas.actor_1 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_1 %}">{{ peliculas.actor_1 }}</a> | 
+                            {% endif %}
+                            {% if peliculas.actor_2 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_2 %}">{{ peliculas.actor_2 }}</a> | 
+                            {% endif %}
+                            {% if peliculas.actor_3 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_3 %}">{{ peliculas.actor_3 }}</a> | 
+                            {% endif %}
+                            {% if peliculas.actor_4 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_4 %}">{{ peliculas.actor_4 }}</a> | 
+                            {% endif %}
+                            {% if peliculas.actor_5 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_5 %}">{{ peliculas.actor_5 }}</a> | 
+                            {% endif %}
+                            {% if peliculas.actor_6 %}
+                                <a href="{% url 'buscar_actor' peliculas.actor_6 %}">{{ peliculas.actor_6 }}</a>
+                            {% endif %}
+                        </p>
+
+                        {% if peliculas.imdb %}
+                            <a href="{{ peliculas.imdb }}" target="_blank">IMDB</a> 
+                        {% else %}  
+                            IMDB
+                        {% endif %}
+                        <br>
+                        <p>{{ peliculas.resenia }}</p>
+                    {% endif %}
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</div> 
+
+{% endblock %}

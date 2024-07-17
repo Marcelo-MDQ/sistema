@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %} ABM Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar nueva Película</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Películas</h4>
+        
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">ImagenLocal</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for pelicula in peliculas %}
+                    <tr class="">
+                        <td scope="row">{{ pelicula.id }}</td>
+                        <td>{{ pelicula.nombre }}</td>
+                        <td>{{ pelicula.anio }}</td>
+                        <td>{{ pelicula.imagen }}</td>
+
+                        {% load static %}
+                        <td><img src="{% static pelicula.imagenlocal %}" height="100" />
+                        </td>
+                        <td><a name="" id="" class="btn btn-info" href="{% url 'editar' pelicula.id %}" role="button">Editar</a>
+                             | <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' pelicula.id %}" role="button" >Borrar</a></td>
+                            
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+</div> 
+
+{% endblock %}

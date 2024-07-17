@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block titulo %} Películas {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Posters de las películas disponibles ({{ cantidad }}) (ordenadas por año)</h4>
+        <a class="btn btn-secondary" href="{% url 'peliculas' %}" role="button">
+            ORDENADAS ALFABETICAMENTE</a>
+        <a class="btn btn-secondary" href="{% url 'peliculasxordenresenia' %}" role="button">
+            ORDENADAS POR FECHA DE RESEÑA</a>
+        <a class="btn btn-secondary" href="{% url 'peliculasxordenanio' %}" role="button">
+            ORDENADAS POR AÑO</a>
+    </br></br>
+        
+        <div class="row justify-content-md-center">
+
+            {% for pelicula in peliculas %}
+
+                    {% if pelicula.imagenlocal %}
+                        <div class="col-md-auto">
+
+                            <a href="{% url 'resenia_Pelicula' pelicula.id %}">
+                            {% load static %}
+                            {% if pelicula.color %}
+                                <img class="cajita" src="{% static pelicula.imagenlocal %}">
+                            {% else %}
+                                <img class="cajita filtro-bn" src="{% static pelicula.imagenlocal %}">
+                            {% endif %}
+                            </a>
+                        </div>
+
+                    {% endif %}
+
+            {% endfor %}
+
+        </div>
+        
+    </div>
+
+</div> 
+
+{% endblock %}
