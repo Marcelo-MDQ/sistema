@@ -198,7 +198,7 @@ def top10(request):
     return render(request, 'paginas/top10.html', {'peliculas': peliculas})
 
 def listado(request):
-    return render(request, 'paginas/lista-filmnoirboard.html')
+    return render(request, 'paginas/lista-65westernsfotogramas.html')
 
 def actores(request):
     actores = []
@@ -333,4 +333,4 @@ def eliminar(request, id):
 
 def reseniaPelicula(request, id):
     peliculas = Pelicula.objects.get(id=id)
-    return render(request, 'paginas/reseniaPelicula.html', {'peliculas': peliculas})
+    return render(request, 'paginas/reseniaPeliculaVertical.html', {'peliculas': peliculas})

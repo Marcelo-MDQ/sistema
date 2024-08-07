@@ -7,8 +7,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Sitio con base de películas del cine noir">
-  <meta name="keywords" content="filmnoir, noir, cine, negro">
+  <meta name="description" content="Sitio con base de películas del cine western">
+  <meta name="keywords" content="western, cine">
  
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -39,8 +39,10 @@
                 <li><a class="dropdown-item" href="{% url 'peliculasxordenanio' %}">x año</a></li>
                 <li><a class="dropdown-item" href="{% url 'peliculas' %}">x orden alfabético</a></li>
                 <li><a class="dropdown-item" href="{% url 'peliculasxordenresenia' %}">x orden de reseña</a></li>
+                <!--
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{% url 'peliculasxanioygenero' %}">GENERO</a></li>
+                -->
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{% url 'peliculascajitas' %}">POSTERS</a></li>
               </ul>
@@ -60,20 +62,17 @@
             </li>
 
             
-
+            <!--
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Listados
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'top10' %}">Mis favoritas</a></li>
-                <li><a class="dropdown-item" href="{% url 'listado' %}">Film Noir Board</a></li>
-                <!--
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                -->
+                <li><a class="dropdown-item" href="{% url 'listado' %}">Los 65 westerns de Fotogramas</a></li>
               </ul>
             </li>
+            -->
 
             <!--
             {% if user.is_superuser %}
@@ -91,8 +90,10 @@
             <!--
             <a class="nav-item nav-link" href="{% url 'queeselfilmnoir' %}">¿Qué es el Film Noir?</a>
             -->
+
+            <!--
             <a class="nav-item nav-link" href="{% url 'nosotros' %}">EL PROYECTO</a>
-            
+            -->
         </div>
 
 

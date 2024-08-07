@@ -9,20 +9,20 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
-                    {% if peliculas.imagenlocal %}
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    {% if peliculas.cajitavertical %}
                         {% load static %}
                         {% if peliculas.color %}
-                            <img src="{% static peliculas.imagenlocal %}" width="100%" float="right" srcset="">
+                            <img src="{% static peliculas.cajitavertical %}" width="100%" float="right" srcset="">
                         {% else %}
-                            <img class="filtro-bn" src="{% static peliculas.imagenlocal %}" width="100%" float="right" srcset="">
+                            <img class="filtro-bn" src="{% static peliculas.cajitavertical %}" width="100%" float="right" srcset="">
                         {% endif %}     
                     {% else %}
                         <img src="" width="100%" float="right" srcset="">
                     {% endif %}
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8">
                     <h2 class="card-title">{{ peliculas.nombre.upper }}</h2>
                     <h4 class="card-title">{{ peliculas.nombre_alternativo }}</h4>
 

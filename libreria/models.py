@@ -28,6 +28,9 @@ class Pelicula(models.Model):
     subgenero3 = models.CharField(max_length=40, default="", blank=True, null=True)
     color = models.BooleanField(verbose_name="Color", default=False, null=True)
     vista = models.BooleanField(verbose_name="Vista", default=False, null=True)
+    cajitavertical = models.ImageField(upload_to='libreria/static/img', verbose_name="CajitaVertical", null=True, blank=True)
+    imagen1 = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen1", null=True, blank=True)
+    imagen2 = models.ImageField(upload_to='libreria/static/img', verbose_name="Imagen2", null=True, blank=True)
 
     # para que se vea mejor en la parte de Admin
     def __str__(self):
